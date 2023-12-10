@@ -13,10 +13,47 @@
     <div class="topnav" id="myTopnav">
 
         <a>Mehdi Bahlaoui</a>
+       
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        
+        <a href="about.html">About</a>
+
 
     </div>
 
 
+
+
+
+    <div style="padding-left:16px">
+        <h2>Welcome!</h2>
+        <p>9:58 PM - 12/10/2023</br>
+            Hey, this is my first time writing this
+        </p>
+    </div>
+
+
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+<footer class="footer bg-dark">
+	<div class="container">
+		<p>Copyright © 2024</p>
+	</div>
+</footer>
 
 </body>
 
