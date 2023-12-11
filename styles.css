@@ -110,6 +110,7 @@ body {
     height: fit-content;
     line-height: 8px;
     font-size: 0.8em;
+    text-align: center;
     text-indent: 1%;
     color: #ddd;;
 }
