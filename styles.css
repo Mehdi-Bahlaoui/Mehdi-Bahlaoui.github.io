@@ -104,11 +104,11 @@ body {
   footer {
     background-color: #333;
 
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: fit-content;
-    line-height: 10px;
+    line-height: 8px;
     font-size: 0.8em;
     text-indent: 1%;
     color: #ddd;;
