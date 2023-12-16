@@ -6,7 +6,6 @@
   overflow: hidden;
 }
 
-
 .topnav a:first-child {
   float: left;
   display: block;
@@ -18,7 +17,6 @@
   font-size: xx-large;
 
 }
-
 .topnav a:not(first-child) {
   float: right;
   display: block;
@@ -30,13 +28,9 @@
   font-size: 17px;
 
 }
-
 .topnav a:nth-child(2) {
   display: none;
 }
-
-
-
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
@@ -48,10 +42,12 @@
   /* background-color: #1f6e45; */
   color: white;
 }
+
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
 }
+
 .img {
   height:35vw;
 }
@@ -62,10 +58,12 @@
   .topnav a:not(:first-child) {
     display: none;
   }
+
   .topnav a.icon {
     float: right;
     display: block;
   }
+
   .img {
     height:80vw;
   }
@@ -77,33 +75,56 @@
   .topnav.responsive {
     position: relative;
   }
+
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+
   .topnav.responsive a {
     float:none;
     /* here fin kaina le3ba */
     display:block;
     text-align: left;
   }
+
 }
 
 
 
 body {
   margin: 0;
-  /* background-color: #2d8c58; */
   background-color: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 
 
+@media (min-width: 600px) {
+
+  .firstLayer {
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+  }
+
+  .contact {
+    margin: 2em;
+    font-size: larger;  
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 2rem;
+  
+  }
+
+}
+
   footer {
     background-color: #333;
-
     position: fixed;
     bottom: 0;
     width: 100%;
