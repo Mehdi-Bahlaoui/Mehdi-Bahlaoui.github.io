@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Roboticore | ENSAM Rabat</title>
+    <link rel="icon" href="imgs/Logo.png" type="image/png">
+    <script>
+        function redirectBasedOnScreenSize() {
+            // Define a threshold for what you consider to be a small screen
+            var smallScreenThreshold = 768; // You can adjust this value
+
+            if (window.innerWidth <= smallScreenThreshold) {
+                // Redirect to the mobile version
+                window.location.href = "Home/home mobile.html";
+            } else {
+                // Redirect to the PC version
+                window.location.href = "Home/home.html";
+            }
+        }
+
+        // Run the function as soon as the script loads
+        redirectBasedOnScreenSize();
+    </script>
+</head>
+<body>
+    <!-- Optional: You can add a message here to inform users if JavaScript is disabled -->
+    <noscript>
+        JavaScript is required to view this page properly. Please enable JavaScript in your browser settings.
+    </noscript>
+</body>
+</html>
