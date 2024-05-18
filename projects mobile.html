@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Projects | Roboticore</title>
+    <link rel="icon" href="../imgs/Logo.png" type="image/png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0-beta1/css/light.css" integrity="sha384-+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-f0qsQcEDQGbJ72RDB8ih9Jnj0iItzRWz+1c/K3yPrB1L0O3/EiqJPeSt1At4S6No+udxz8UWd8ljD3oxfJZgcA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        html {
+            background-color: #00051A;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 2;
+            height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        img {
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            max-width: 750px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        
+        #events {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            width: 100%;
+            overflow: auto;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        .container2 {
+            margin: 20px 0;
+            display: flex;
+            width: 90vw;
+            overflow: hidden;
+            justify-content: center;
+        }
+
+        .panel {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 50vw;
+            max-height: 400px;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            flex: 1;
+            margin: 10px;
+            position: relative;
+            border: 2px solid rgba(23, 9, 114, 0.479);
+            transition: all 700ms ease-in;
+        }
+
+        .bsub {
+            color: #00051A;
+            text-shadow: black;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            font-size: 24px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            margin: 0;
+            opacity: 1;
+            border-left: 7px solid #00051A;
+            padding-left: 10px;
+            z-index: 3;
+        }
+
+        .panel.active {
+            flex: 5;
+        }
+
+        h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 30x;
+            text-align: center;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .footer {
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            background-color: black;
+            height: auto;
+        }
+
+        .footer nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: -30px;
+        }
+
+        .footer nav ul a i {
+            font-size: 24px;
+        }
+
+        .footer nav ul a {
+            display: inline-block;
+            color: white;
+            margin: 0 0px !important;
+            transition: color 0.3s;
+        }
+
+        .footer nav ul a:hover {
+            color: lightblue;
+        }
+
+        .footer p {
+            font-family: 'Comic Sans MS', sans-serif;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+
+            .bsub {
+                font-size: 28px;
+                bottom: 10px;
+                left: 10px;
+            }
+
+            h2 {
+                font-size: 28px;
+                margin-top: 10px;
+            }
+
+            .panel {
+                height: 60vw;
+                max-height: 300px;
+            }
+
+            .panel.active {
+                flex: 2;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .bsub {
+                font-size: 16px;
+                bottom: 5px;
+                left: 5px;
+            }
+
+            h2 {
+                font-size: 25px;
+                margin-top: 30px;
+            }
+
+            .panel {
+                height: 80vw;
+                max-height: 230px;
+            }
+
+            .panel.active {
+                flex: 1.5;
+            }
+        }
+
+
+     
+  .navbar{
+    border-bottom: 1px solid white; /* You can adjust the color, width, and style as needed */
+    padding-bottom: 200px;
+  }
+
+  
+  
+.links ul li::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: hsla(0, 0%, 100%, 0.75);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+
+  
+  .links ul li:hover::after {
+    width: 100%;
+  }
+  /* .links ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+  } */
+  .links ul li a {
+    text-shadow: 2px 2px 2px rgba(1,1,1,2);
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    /* padding: 9px 30px; /* Adjusted padding  */
+  }
+  
+  
+  .links ul li:not(:last-child) a::after {
+    /* content: "|"; */
+    position: absolute;
+    right: 0;
+    padding-left: 10px; /* Adjust spacing between text and separator */
+    color: #fff;
+  
+  } 
+  
+  .navbar{
+    border-bottom: 1px solid white; /* You can adjust the color, width, and style as needed */
+    padding-bottom: 125px;
+  }
+
+  nav a{
+    text-shadow: 1px 1px 1px rgba(1,1,1,2);
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    /* margin-right: 20px; */
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+  }
+  
+  /* nav li:first-child{
+    margin-right: auto;
+  } */
+  
+  .sidebar{
+    z-index: 100;
+    position: fixed;
+    top: -20px; 
+    right: 0px;
+    height: 130vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar li{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+
+  .links ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    }
+
+  .links ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}  
+  
+  .menu-button svg {
+      fill: white;
+  }
+  .close-button svg {
+      fill: white;
+  }
+  
+
+  .hideOnPC a{
+    font-size: 26px !important; 
+  }
+  
+    .hideOnPC{
+      color: white ;
+      font-family: 'Raleway', sans-serif;
+      z-index: -2;
+      display: block;
+      position: absolute;
+      left: 0; 
+      top: 40px;
+  
+    }
+    .menu-button{
+      display: block;
+      position: absolute; /* Position it absolutely within its positioned parent */
+      right: 0; /* Align to the right */
+      top: 50px; /* Align to the top, adjust this value based on your design */
+    }
+
+
+    .description p{
+        color: #00051A;
+        text-shadow: 1px 1px 1px rgba(1,1,1,2);
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(34, 193, 195, 0.3); /* Adjust the background color and opacity */
+        border-radius: 10px; /* Adjust border radius as needed */
+        opacity: 0;
+        transition: opacity 0.3s, transform 0.3s;
+        transform: translateY(50%);
+        color: white;
+    }
+    
+    .panel:hover .description {
+        opacity: 0; /* Set initial opacity to 0 */
+        pointer-events: none; /* Disable pointer events */
+        transform: translateY(50%);
+        transition: opacity 0.3s, transform 0.5s;
+        transition-delay: 0.5s;
+    }
+    
+    .panel.active:hover .description {
+        opacity: 1;
+        pointer-events: auto; /* Enable pointer events */
+        transform: translateY(0);
+    }
+    
+
+    </style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="links" id="link">
+      
+      <ul class="sidebar">
+        <li class="close-button" onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 96 960 960" width="36"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="#" >Projects</a></li>
+            <li><a href="competitions mobile.html"  >EVENTS & COMPETITION</a></li>
+            <li><a href="car mobile.html" >CAR</a></li>
+          </ul>
+      
+      <ul>
+        <li class="hideOnPC"><a href="#">RobotiCore</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 96 960 960" width="36"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+      </ul>
+      
+    </div>
+</nav>
+
+    <h2> CHECK OUR PROJECTS</h2>
+    <section id="events">
+        <div class="container">
+            <div class="container2">
+                <div class="panel active" style="background-image: url(../imgs/Projets/Drone\ nice\ quality.png);" draggable="false">
+                    <h1 class="bsub">QUADROCOPTER</h1>
+                    <div class="description"><p>Drone à 4 hélices</p></div>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="panel" style="background-image: url(../imgs/Projets/Fodisco.png);" draggable="false">
+                    <h1 class="bsub">FODISCO</h1>
+                    <div class="description"><p> Robot explorateur tout terrain</p></div>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="panel" style="background-image: url(../imgs/Projets/Kinebras\ 2.png);" draggable="false">
+                    <h1 class="bsub">KINEBRAS</h1>
+                    <div class="description"><p>Une main robotisée qui permet la rééducation de la main via une application</p></div>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="panel" style="background-image: url(../imgs/Projets/a\'.jpg);" draggable="false">
+                    <h1 class="bsub">ARMBOT</h1>
+                    <div class="description"><p>un robot à bras pour élever les petits objets</p></div>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="panel" style="background-image: url(../imgs/Projets/Essaim\ Enviroment\ robots.png);" draggable="false">
+                    <h1 class="bsub">ESSAIM ENVIRONNEMENT ROBOTS</h1>
+                    <div class="description"><p>4 robots connectés Master-Slave destinés à l'exploration d'une zone géographique</p></div>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="panel" style="background-image: url(../imgs/Projets/spidaar.png);" draggable="false">
+                    <h1 class="bsub">SPIDERBOT</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <nav>
+            <ul>
+                <a href="https://fr.linkedin.com/company/clubroboticore" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://web.facebook.com/RobotiCore/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/clubroboticore/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@clubroboticore" target="_blank"><i class="fab fa-youtube"></i></a>
+            </ul>
+        </nav>
+        <br>
+        <p>Designed By Roboticore Team - Copyright © 2024 - All rights reserved</p>
+    </div>
+    <script>
+        function redirectBasedOnScreenSize() {
+            // Define a threshold for what you consider to be a small screen
+            var smallScreenThreshold = 768; // You can adjust this value
+      
+            if (window.innerWidth >= smallScreenThreshold) {
+                // Redirect to the mobile version
+                window.location.href = "projects.html";
+            } 
+        }
+      
+        // Run the function as soon as the script loads
+        redirectBasedOnScreenSize();
+      </script>
+    <script>
+        const panels = document.querySelectorAll(".panel");
+
+        panels.forEach((panel) => {
+            panel.addEventListener("click", () => {
+                removeActiveClasses();
+                panel.classList.add("active");
+            });
+        });
+
+        function removeActiveClasses() {
+            panels.forEach((panel) => {
+                panel.classList.remove("active");
+            });
+        }
+    </script>
+    <script>
+        function slideUpTogether() {
+          document.body.style.marginTop = `-${document.getElementById("topBar").offsetHeight}px`;
+          document.querySelector('.sidebar').style.marginTop = '-50px'
+          document.querySelector('.menu-button').style.marginTop = '-50px'
+          document.querySelector('.hideOnPC').style.marginTop = '-50px'
+        
+            document.querySelector('.team_image').style.marginTop = '+100px'
+        }  
+        function showSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'flex'
+      
+          const menuButton = document.querySelector('.menu-button')
+          menuButton.style.display = 'none'
+        }
+        function hideSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'none'
+      
+          const menuButton = document.querySelector('.menu-button')
+          menuButton.style.display = 'block'
+        }
+      </script>
+
+</body>
+</html>
