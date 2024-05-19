@@ -329,50 +329,39 @@ body.active-panel {
     padding: 50px 10px;
     background-color: black;
     height: 80px;
-  }
-
-
+}
 
 .footer nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0; /* Remove default margin */
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    display: inline-block; /* Ensure ul is inline-block */
 }
 
-footer nav ul {
-  size: 50px;
-  list-style-type: none;
-  padding: 0;
-  margin: 0; /* Remove default margin */
+.footer nav ul li {
+    display: inline-block; /* Ensure li elements are inline */
+    margin-right: 5px; /* Adjust spacing between icons */
 }
 
-footer nav ul {
-  display: inline;
-}
 .footer nav ul a i {
-    margin-top: -50px;
-    margin: 0 0px !important;
     font-size: 22px; /* Adjust the size as needed */
 }
 
-.footer nav ul  a {
-    margin-top: -50px;
+.footer nav ul a {
     display: inline-block;
     color: white;
-    margin-right: 10px;
     transition: color 0.3s;
+    margin-right: 0; /* Remove margin from anchor tags */
 }
 
 .footer nav ul a:hover {
-  color: lightblue; /* Change color on hover */
+    color: lightblue; /* Change color on hover */
 }
-
 
 .footer p {
     margin-top: -40px;
     font-family: 'Comic Sans MS', sans-serif;
-  }
-
+}
 
 .links ul li::after {
     content: '';
