@@ -1155,12 +1155,18 @@
     z-index: 1;
     transform: rotate(-120deg);
     animation: rotate 6s linear infinite;
+    transition: animation 0.5s ease-in-out; /* Smooth transition */
     border: 20px;
 }
 
 .gear_container:hover,
 .gear_container:active {
-    animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite; /* Faster rotation when active */
+    transition: animation 0.2s ease-in-out; /* Quick transition to faster speed */
+}
+
+.gear_container {
+    animation: rotate 6s linear infinite; /* Back to original speed */
 }
 
 @keyframes rotate {
@@ -1171,6 +1177,7 @@
         transform: rotate(360deg);
     }
 }
+
 
 .mapbox {
     justify-items: center;
