@@ -3,7 +3,7 @@
   }
   
   body {
-    overflow: -webkit-paged-x;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch; 
   }
 
