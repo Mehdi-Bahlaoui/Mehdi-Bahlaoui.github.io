@@ -1,9 +1,12 @@
 ::-webkit-scrollbar {
     display: none;
   }
+html {
+    overflow-x: hidden; 
+}
   
   body {
-    overflow-x: hidden;
+    overflow: -webkit-paged-x;
     -webkit-overflow-scrolling: touch; 
   }
 
