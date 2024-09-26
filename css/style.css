@@ -243,7 +243,7 @@ html {
     margin: 20px 0;
     border-radius: 6px;
     align-self: center;
-    width: 50vw;
+    width: 80vw;
   }
   .timeline__event:nth-child(2n+1) {
     flex-direction: row-reverse;
