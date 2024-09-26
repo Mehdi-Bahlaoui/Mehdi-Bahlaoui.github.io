@@ -236,15 +236,20 @@ html {
     margin: 20px auto;
     position: relative;
   }
-  .timeline__event {
+.timeline__event {
     margin-bottom: 20px;
     position: relative;
     display: flex;
     margin: 20px 0;
     border-radius: 6px;
     align-self: center;
-    width: 50vw;
-  }
+    width: 80vw;
+}
+
+.timeline__event img {
+    max-height: 300px; /* Set the maximum height for images */
+    width: auto; /* Maintain aspect ratio */
+}
   .timeline__event:nth-child(2n+1) {
     flex-direction: row-reverse;
   }
