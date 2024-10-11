@@ -1,9 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 ::-webkit-scrollbar {
     display: none;
   }
-html {
-    overflow-x: hidden; 
-}
   
   body {
     overflow: -webkit-paged-x;
@@ -106,38 +105,6 @@ html {
 }
 
 
-#verified-certificate {
-      display: flex;
-      align-items: center;
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.2rem;
-      color: #2e7d32; /* Dark green text */
-}
-
-#verified-certificate::before {
-      content: '\2714'; /* Unicode for checkmark */
-      font-size: 1.5rem;
-      text-align: center;
-      color: #4caf50; /* Green icon */
-      margin-right: 10px !important;
-}
-#invalid-certificate {
-      display: flex;
-      align-items: center;
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.2rem;
-      color: #d32f2f; /* Dark red text */
-}
-
-#invalid-certificate::before {
-      content: '\26A0'; /* Unicode for warning symbol */
-      font-size: 1.5rem;
-      text-align: center;
-      color: #f44336; /* Red icon */
-      margin-right: 10px;
-}
 
 /*** Spinner ***/
 #spinner {
@@ -207,6 +174,7 @@ html {
     margin-bottom: 20px;
 }
 
+
 #certificate-image {
     width: 800px; /* Set the width to 800px */
     height: auto;
@@ -224,13 +192,39 @@ html {
     margin: 5px 0; /* Adjust the spacing between the info elements */
 }
 
-#verification-message {
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    width: 100%;
-    margin-top: 30px;
+#verified-certificate {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      color: #2e7d32; /* Dark green text */
 }
+
+#verified-certificate::before {
+      content: '\2714'; /* Unicode for checkmark */
+      font-size: 1.5rem;
+      text-align: center;
+      color: #4caf50; /* Green icon */
+      margin-right: 10px !important;
+}
+#invalid-certificate {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      color: #d32f2f; /* Dark red text */
+}
+
+#invalid-certificate::before {
+      content: '\26A0'; /* Unicode for warning symbol */
+      font-size: 1.5rem;
+      text-align: center;
+      color: #f44336; /* Red icon */
+      margin-right: 10px;
+}
+
 
 
 
@@ -268,20 +262,15 @@ html {
     margin: 20px auto;
     position: relative;
   }
-.timeline__event {
+  .timeline__event {
     margin-bottom: 20px;
     position: relative;
     display: flex;
     margin: 20px 0;
     border-radius: 6px;
     align-self: center;
-    width: 80vw;
-}
-
-.timeline__event img {
-    max-height: 300px; /* Set the maximum height for images */
-    width: auto; /* Maintain aspect ratio */
-}
+    width: 50vw;
+  }
   .timeline__event:nth-child(2n+1) {
     flex-direction: row-reverse;
   }
@@ -393,7 +382,6 @@ html {
   }
   .timeline__event__description {
     flex-basis: 100%;
-    margin-top: 30px;
   }
   .timeline__event--type2:after {
     background: #003366; /* Dark Blue */
@@ -403,14 +391,14 @@ html {
     background: #003366; /* Dark Blue */
   }
   .timeline__event--type2:nth-child(2n+1) .timeline__event__icon:before, .timeline__event--type2:nth-child(2n+1) .timeline__event__icon:after {
-    background:#003366; /* Light Grey */
+    background: #d0d0d0; /* Light Grey */
   }
   .timeline__event--type2 .timeline__event__icon {
-    background: #003366; /* Light Grey */
+    background: #d0d0d0; /* Light Grey */
     color: #003366; /* Dark Blue */
   }
   .timeline__event--type2 .timeline__event__icon:before, .timeline__event--type2 .timeline__event__icon:after {
-    background: #003366; /* Light Grey */
+    background: #d0d0d0; /* Light Grey */
   }
   .timeline__event--type2 .timeline__event__title {
     color: #003366; /* Dark Blue */
@@ -419,18 +407,18 @@ html {
     background: #003366; /* Dark Blue */
   }
   .timeline__event--type3 .timeline__event__date {
-    color: #003366; /* Light Grey */
+    color: #d0d0d0; /* Light Grey */
     background-color: #003366; /* Dark Blue */
   }
   .timeline__event--type3:nth-child(2n+1) .timeline__event__icon:before, .timeline__event--type3:nth-child(2n+1) .timeline__event__icon:after {
-    background: #003366; /* Light Grey */
+    background: #d0d0d0; /* Light Grey */
   }
   .timeline__event--type3 .timeline__event__icon {
-    background: #003366; /* Light Grey */
+    background: #d0d0d0; /* Light Grey */
     color: #003366; /* Dark Blue */
   }
   .timeline__event--type3 .timeline__event__icon:before, .timeline__event--type3 .timeline__event__icon:after {
-    background: #003366; /* Light Grey */
+    background: #d0d0d0; /* Light Grey */
   }
   .timeline__event--type3 .timeline__event__title {
     color: #003366; /* Dark Blue */
@@ -448,7 +436,10 @@ html {
       width: 100%;
     }
     .timeline__event__icon {
-      display: none;
+      border-radius: 6px 6px 0 0;
+      width: 100%;
+      margin: 0;
+      box-shadow: none;
     }
     .timeline__event__icon:before, .timeline__event__icon:after {
       display: none;
@@ -1132,34 +1123,6 @@ html {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
-.verified-message {
-  display: flex;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  background-color: #e8f5e9; /* Light green background */
-  color: #2e7d32; /* Darker green text */
-  border: 1px solid #4caf50; /* Green border */
-  padding: 10px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.icon-check {
-  content: '\2714'; /* Unicode for checkmark */
-  font-size: 1.5rem;
-  color: #4caf50; /* Green icon */
-  margin-right: 10px;
-}
-
-
-
-
-
-
-
 .logo-container {
     transform-style: preserve-3d;
     z-index: 9999; /* Ensure it's on top of other elements */
@@ -1190,18 +1153,12 @@ html {
     z-index: 1;
     transform: rotate(-120deg);
     animation: rotate 6s linear infinite;
-    transition: animation 0.5s ease-in-out; /* Smooth transition */
     border: 20px;
 }
 
 .gear_container:hover,
 .gear_container:active {
-    animation: rotate 2s linear infinite; /* Faster rotation when active */
-    transition: animation 0.2s ease-in-out; /* Quick transition to faster speed */
-}
-
-.gear_container {
-    animation: rotate 6s linear infinite; /* Back to original speed */
+    animation: rotate 2s linear infinite;
 }
 
 @keyframes rotate {
@@ -1212,7 +1169,6 @@ html {
         transform: rotate(360deg);
     }
 }
-
 
 .mapbox {
     justify-items: center;
@@ -1276,7 +1232,7 @@ html {
   
   .jumpy-button {
     position: absolute;
-    bottom: -250px;
+    bottom: -300px;
     background-color: #162645;
     color: white;
     border: none;
@@ -1401,21 +1357,20 @@ html {
     }
 }
 
-@media (max-width: 576px) {
-            #certificate-image {
-                width: 100%; /* Set image width to 100% of its container */
-                height: auto; /* Maintain aspect ratio */
-            }
-            #certificate-buttons {
-                display: flex;
-                flex-direction: column; /* Stack buttons vertically */
-                margin-top: 10px; /* Reduce space above buttons */
-            }
-            #verification-container {
-                padding: 15px; /* Add padding for better spacing */
-            }
-            .info-box {
-                text-align: center; /* Center the info text */
-                margin-top: 10px; /* Space between image and info */
-            }
+@media (max-width: 768px) { /* Adjust the max-width as per your requirements */
+    #image-info-wrapper {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: stretch; /* Ensure elements stretch to fill the width */
+    }
+
+    #image-info-wrapper img {
+        width: 100%; /* Ensure the image does not overflow */
+    }
+
+    .info-box {
+        width: 100%; /* Ensure the information section fills the width */
+    }
+    #certificate-buttons {
+        margin-right: 40px !important;
+    }
 }
