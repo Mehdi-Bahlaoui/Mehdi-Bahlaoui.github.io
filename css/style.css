@@ -1400,3 +1400,22 @@ html {
         font-size: calc(1.3rem + .9vw);    
     }
 }
+
+@media (max-width: 576px) {
+            #certificate-image {
+                width: 100%; /* Set image width to 100% of its container */
+                height: auto; /* Maintain aspect ratio */
+            }
+            #certificate-buttons {
+                display: flex;
+                flex-direction: column; /* Stack buttons vertically */
+                margin-top: 10px; /* Reduce space above buttons */
+            }
+            #verification-container {
+                padding: 15px; /* Add padding for better spacing */
+            }
+            .info-box {
+                text-align: center; /* Center the info text */
+                margin-top: 10px; /* Space between image and info */
+            }
+}
