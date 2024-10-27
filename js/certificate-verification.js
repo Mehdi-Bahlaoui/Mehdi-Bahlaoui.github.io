@@ -9,7 +9,7 @@
         },
         '551872': {
             message: 'Certificate for Aya Chehhal is Verified',
-            imageUrl: 'img/Certs/abdo.jpeg',
+            imageUrl: 'img/Certs/551872.png',
         },
         '557476': {
             message: 'Certificate for Ben-Aissa Aymane is Verified',
