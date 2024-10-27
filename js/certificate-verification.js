@@ -3,16 +3,248 @@
     const id = urlParams.get('id');
 
     const validCertificates = {
-        'Mehdi-Bahlaoui': {
-            message: 'Certificate for Mehdi Bahlaoui is Verified',
-            imageUrl: 'img/mehdi.jpg',
-        },
-        'Abdoullah-Alalgui': {
-            message: 'Certificate for Abdoullah Alalgui is Verified',
-            imageUrl: 'img/abdo.jpeg',
-        },
-        // Add more names as needed
-    };
+    '839752': {
+        message: 'Certificate for Oubati Randa is Verified',
+        imageUrl: 'img/certs/839752.png',
+    },
+    '551872': {
+        message: 'Certificate for Aya Chehhal is Verified',
+        imageUrl: 'img/certs/551872.png',
+    },
+    '557476': {
+        message: 'Certificate for Ben-Aissa Aymane is Verified',
+        imageUrl: 'img/certs/557476.png',
+    },
+    '164664': {
+        message: 'Certificate for El Bir Amira is Verified',
+        imageUrl: 'img/certs/164664.png',
+    },
+    '813383': {
+        message: 'Certificate for Aya Ennakhlaoui is Verified',
+        imageUrl: 'img/certs/813383.png',
+    },
+    '774855': {
+        message: 'Certificate for Aferdou Hajar is Verified',
+        imageUrl: 'img/certs/774855.png',
+    },
+    '643537': {
+        message: 'Certificate for Azeroual Youssef is Verified',
+        imageUrl: 'img/certs/643537.png',
+    },
+    '287840': {
+        message: 'Certificate for Siham AitSi is Verified',
+        imageUrl: 'img/certs/287840.png',
+    },
+    '902144': {
+        message: 'Certificate for Elgraini Yousra is Verified',
+        imageUrl: 'img/certs/902144.png',
+    },
+    '153728': {
+        message: 'Certificate for Bougroun Rachid is Verified',
+        imageUrl: 'img/certs/153728.png',
+    },
+    '908226': {
+        message: 'Certificate for Laaouina Karim is Verified',
+        imageUrl: 'img/certs/908226.png',
+    },
+    '168403': {
+        message: 'Certificate for Lakhdar Oumaima is Verified',
+        imageUrl: 'img/certs/168403.png',
+    },
+    '720654': {
+        message: 'Certificate for Fikri Mohamed is Verified',
+        imageUrl: 'img/certs/720654.png',
+    },
+    '637329': {
+        message: 'Certificate for Elmassoudi Rachida is Verified',
+        imageUrl: 'img/certs/637329.png',
+    },
+    '204387': {
+        message: 'Certificate for Attar Rida is Verified',
+        imageUrl: 'img/certs/204387.png',
+    },
+    '829542': {
+        message: 'Certificate for Benhammou Anas is Verified',
+        imageUrl: 'img/certs/829542.png',
+    },
+    '752801': {
+        message: 'Certificate for Lafkani Leila is Verified',
+        imageUrl: 'img/certs/752801.png',
+    },
+    '158239': {
+        message: 'Certificate for Khadiri Abdelaziz is Verified',
+        imageUrl: 'img/certs/158239.png',
+    },
+    '478392': {
+        message: 'Certificate for Chayeb Hiba is Verified',
+        imageUrl: 'img/certs/478392.png',
+    },
+    '824567': {
+        message: 'Certificate for Tazi Nawal is Verified',
+        imageUrl: 'img/certs/824567.png',
+    },
+    '386091': {
+        message: 'Certificate for Kamal Omar is Verified',
+        imageUrl: 'img/certs/386091.png',
+    },
+    '305672': {
+        message: 'Certificate for Saidi Fatima is Verified',
+        imageUrl: 'img/certs/305672.png',
+    },
+    '490287': {
+        message: 'Certificate for Hamid Anas is Verified',
+        imageUrl: 'img/certs/490287.png',
+    },
+    '791065': {
+        message: 'Certificate for Ziani Sara is Verified',
+        imageUrl: 'img/certs/791065.png',
+    },
+    '642935': {
+        message: 'Certificate for Barkani Hamza is Verified',
+        imageUrl: 'img/certs/642935.png',
+    },
+    '803721': {
+        message: 'Certificate for Merah Rania is Verified',
+        imageUrl: 'img/certs/803721.png',
+    },
+    '258396': {
+        message: 'Certificate for Khaili Reda is Verified',
+        imageUrl: 'img/certs/258396.png',
+    },
+    '459823': {
+        message: 'Certificate for Azzaoui Salma is Verified',
+        imageUrl: 'img/certs/459823.png',
+    },
+    '908147': {
+        message: 'Certificate for Jalal Mohamed is Verified',
+        imageUrl: 'img/certs/908147.png',
+    },
+    '375289': {
+        message: 'Certificate for Bennis Amine is Verified',
+        imageUrl: 'img/certs/375289.png',
+    },
+    '714623': {
+        message: 'Certificate for Berkani Aya is Verified',
+        imageUrl: 'img/certs/714623.png',
+    },
+    '289346': {
+        message: 'Certificate for Kerroum Hanane is Verified',
+        imageUrl: 'img/certs/289346.png',
+    },
+    '472930': {
+        message: 'Certificate for Zouaoui Ibtissam is Verified',
+        imageUrl: 'img/certs/472930.png',
+    },
+    '568904': {
+        message: 'Certificate for Chakir Hicham is Verified',
+        imageUrl: 'img/certs/568904.png',
+    },
+    '690147': {
+        message: 'Certificate for Amraoui Nizar is Verified',
+        imageUrl: 'img/certs/690147.png',
+    },
+    '783052': {
+        message: 'Certificate for Kabbaj Aya is Verified',
+        imageUrl: 'img/certs/783052.png',
+    },
+    '239854': {
+        message: 'Certificate for Rahmani Rachid is Verified',
+        imageUrl: 'img/certs/239854.png',
+    },
+    '385729': {
+        message: 'Certificate for Essabri Fatima is Verified',
+        imageUrl: 'img/certs/385729.png',
+    },
+    '482903': {
+        message: 'Certificate for Elgourram Karim is Verified',
+        imageUrl: 'img/certs/482903.png',
+    },
+    '603918': {
+        message: 'Certificate for Moutaouakil Sara is Verified',
+        imageUrl: 'img/certs/603918.png',
+    },
+    '539627': {
+        message: 'Certificate for Habchi Hajar is Verified',
+        imageUrl: 'img/certs/539627.png',
+    },
+    '689731': {
+        message: 'Certificate for Medkouri Rania is Verified',
+        imageUrl: 'img/certs/689731.png',
+    },
+    '238047': {
+        message: 'Certificate for Rami Nabil is Verified',
+        imageUrl: 'img/certs/238047.png',
+    },
+    '596378': {
+        message: 'Certificate for Elghezouani Amine is Verified',
+        imageUrl: 'img/certs/596378.png',
+    },
+    '102937': {
+        message: 'Certificate for Souaoui Hicham is Verified',
+        imageUrl: 'img/certs/102937.png',
+    },
+    '748392': {
+        message: 'Certificate for Elhamri Reda is Verified',
+        imageUrl: 'img/certs/748392.png',
+    },
+    '612387': {
+        message: 'Certificate for Rmidi Sara is Verified',
+        imageUrl: 'img/certs/612387.png',
+    },
+    '529374': {
+        message: 'Certificate for Charoukh Meryem is Verified',
+        imageUrl: 'img/certs/529374.png',
+    },
+    '839726': {
+        message: 'Certificate for Bouhali Omar is Verified',
+        imageUrl: 'img/certs/839726.png',
+    },
+    '318942': {
+        message: 'Certificate for Lahmidi Aymane is Verified',
+        imageUrl: 'img/certs/318942.png',
+    },
+    '924637': {
+        message: 'Certificate for Kharbouch Amal is Verified',
+        imageUrl: 'img/certs/924637.png',
+    },
+    '712394': {
+        message: 'Certificate for Fares Anouar is Verified',
+        imageUrl: 'img/certs/712394.png',
+    },
+    '158273': {
+        message: 'Certificate for Kabbouri Imane is Verified',
+        imageUrl: 'img/certs/158273.png',
+    },
+    '492031': {
+        message: 'Certificate for Laamiri Nour is Verified',
+        imageUrl: 'img/certs/492031.png',
+    },
+    '782403': {
+        message: 'Certificate for Ouardani Mohamed is Verified',
+        imageUrl: 'img/certs/782403.png',
+    },
+    '620394': {
+        message: 'Certificate for Khayraoui Rachid is Verified',
+        imageUrl: 'img/certs/620394.png',
+    },
+    '389471': {
+        message: 'Certificate for Mahrouq Sarah is Verified',
+        imageUrl: 'img/certs/389471.png',
+    },
+    '682934': {
+        message: 'Certificate for Tabib Anas is Verified',
+        imageUrl: 'img/certs/682934.png',
+    },
+    '104982': {
+        message: 'Certificate for Lamrabet Omar is Verified',
+        imageUrl: 'img/certs/104982.png',
+    },
+    '839472': {
+        message: 'Certificate for Kerroum Khalid is Verified',
+        imageUrl: 'img/certs/839472.png',
+    },
+};
+
 
     
     // Check if the ID matches any valid certificate
