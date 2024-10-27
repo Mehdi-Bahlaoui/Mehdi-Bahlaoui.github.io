@@ -5,7 +5,7 @@
     const validCertificates = {
     '839752': {
         message: 'Certificate for Oubati Randa is Verified',
-        imageUrl: 'img/Certs/839752.png',
+        imageUrl: 'img/abdo.jpeg',
     },
     '551872': {
         message: 'Certificate for Aya Chehhal is Verified',
