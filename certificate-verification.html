@@ -128,54 +128,54 @@
     <h1 id="verification-message" class="verification-message">Checking certificate...</h1>
 
 
-<!-- Modal Structure -->
-<div class="modal fade" id="rankingsModal" tabindex="-1" aria-labelledby="rankingsModalLabel" aria-hidden="true">
-    <span class="close-button" onclick="closeModal()">✖</span>
-    <div class="modal-dialog">
+        <!-- Modal Structure -->
+        <div class="modal fade" id="rankingsModal" tabindex="-1" aria-labelledby="rankingsModalLabel" aria-hidden="true">
+            <span class="close-button" onclick="closeModal()">✖</span>
+            <div class="modal-dialog">
+                
+                <div class="modal-content">
+                   
+                    <h1>Top 20 In Arduino's Workshop</h1>
+                    
+                    <div class="podium-container">
+                        <div class="podium second">
+                            <div class="rank">🥈</div>
+                            <div class="name">Karim Dekkani</div>
+                        </div>
+                        <div class="podium first">
+                            <div class="rank">🥇</div>
+                            <div class="name">Abdoullah Alalgui</div>
+                        </div>
+                        <div class="podium third">
+                            <div class="rank">🥉</div>
+                            <div class="name">Mehdi Bahlaoui</div>
+                        </div>
+                    </div>
         
-        <div class="modal-content">
-           
-            <h1>Top 20 In Arduino's Workshop</h1>
-            
-            <div class="podium-container">
-                <div class="podium second">
-                    <div class="rank">🥈</div>
-                    <div class="name">Karim Dekkani</div>
-                </div>
-                <div class="podium first">
-                    <div class="rank">🥇</div>
-                    <div class="name">Abdoullah Alalgui</div>
-                </div>
-                <div class="podium third">
-                    <div class="rank">🥉</div>
-                    <div class="name">Mehdi Bahlaoui</div>
+                    <!-- Underlined "Validé" and "Non Validé" -->
+                    <div class="validation-container">
+                        <span id="valide-button" class="validation selected" onclick="toggleList('valide-list', 'non-valide-list')">Validé</span>
+                        <span id="non-valide-button" class="validation" onclick="toggleList('non-valide-list', 'valide-list')">Non Validé</span>
+                    </div>
+        
+                    <!-- "Validé" list -->
+                    <ul id="valide-list" class="validation-list">
+                        <li><span class="position">4</span> Ilyas Figuigui <span class="grade">10/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">5</span> Rostom Nizar <span class="grade">10/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">6</span> Rajae Tora <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
+                    </ul>
+                
+                    <!-- "Non Validé" list -->
+                    <ul id="non-valide-list" class="validation-list">
+                        <li><span class="position">7</span> Mehdi Haytom <span class="grade">5/10</span> <span class="status">Non Validé</span></li>
+                        <li><span class="position">8</span> Achraf Echaffaoui <span class="grade">0/10</span> <span class="status">Non Validé</span></li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Underlined "Validé" and "Non Validé" -->
-            <div class="validation-container">
-                <span id="valide-button" class="validation selected" onclick="toggleList('valide-list', 'non-valide-list')">Validé</span>
-                <span id="non-valide-button" class="validation" onclick="toggleList('non-valide-list', 'valide-list')">Non Validé</span>
-            </div>
-
-            <!-- "Validé" list -->
-            <ul id="valide-list" class="validation-list">
-                <li><span class="position">4</span> Ilyas Figuigui <span class="grade">10/10</span> <span class="status">Validé</span></li>
-                <li><span class="position">5</span> Rostom Nizar <span class="grade">10/10</span> <span class="status">Validé</span></li>
-                <li><span class="position">6</span> Rajae Tora <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
-            </ul>
-        
-            <!-- "Non Validé" list -->
-            <ul id="non-valide-list" class="validation-list">
-                <li><span class="position">7</span> Mehdi Haytom <span class="grade">5/10</span> <span class="status">Non Validé</span></li>
-                <li><span class="position">8</span> Achraf Echaffaoui <span class="grade">0/10</span> <span class="status">Non Validé</span></li>
-            </ul>
         </div>
-    </div>
-</div>
 
       <!-- Footer Start -->
-      <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5" id="">
                 <div class="col-lg-3 col-md-6">
@@ -227,7 +227,7 @@
                 </div>
             </div>
         </div>
-    </div>
+</div>
     <!-- Footer End -->
 
 
