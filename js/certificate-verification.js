@@ -1,3 +1,5 @@
+    // Wait until the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function () {
     // Get the 'id' parameter from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
@@ -255,56 +257,53 @@
 
 
     
-    // Check if the ID matches any valid certificate
+ // Check if the ID matches any valid certificate
     if (validCertificates[id]) {
         const certificate = validCertificates[id];
+
+        // Access elements only if they exist
         const verificationMessage = document.getElementById('verification-message');
-
-        
-
-        // Set the message and assign a new ID for valid certificates
-        verificationMessage.innerText = certificate.message;
-        verificationMessage.id = 'verified-certificate';
-
-        document.getElementById('certificate-image').src = certificate.imageUrl;
-
-        // Set the download link
+        const certificateImage = document.getElementById('certificate-image');
         const downloadButton = document.getElementById('download-button');
-        downloadButton.href = certificate.imageUrl;
-
-        // Set LinkedIn button action to open Certifications and Licenses page
         const linkedinButton = document.getElementById('linkedin-button');
-        linkedinButton.addEventListener('click', function() {
-            // Open the LinkedIn Certification and Licenses page
-            const linkedInCertificationUrl = 'https://www.linkedin.com/in/me/edit/forms/certification/new/?profileFormEntryPoint=PROFILE_COMPLETION_HUB';
+        const infoBox = document.getElementById('info-box');
+        const certificateButtons = document.getElementById('certificate-buttons');
 
-            // Attempt to open the URL in a new tab
-            const newWindow = window.open(linkedInCertificationUrl, '_blank');
-            document.querySelector('.btn-black').addEventListener('click', function() {
-                // Example: Load or modify the modal content dynamically
-                const modalBody = document.querySelector('#rankingsModal .modal-body');
-                modalBody.innerHTML = '<p>Updated rankings content goes here.</p>';
+        // Check for each element before modifying its properties
+        if (verificationMessage) {
+            verificationMessage.innerText = certificate.message;
+            verificationMessage.id = 'verified-certificate';
+        }
+
+        if (certificateImage) {
+            certificateImage.src = certificate.imageUrl;
+        }
+
+        if (downloadButton) {
+            downloadButton.href = certificate.imageUrl;
+        }
+
+        if (linkedinButton) {
+            linkedinButton.addEventListener('click', function () {
+                const linkedInCertificationUrl = 'https://www.linkedin.com/in/me/edit/forms/certification/new/?profileFormEntryPoint=PROFILE_COMPLETION_HUB';
+                const newWindow = window.open(linkedInCertificationUrl, '_blank');
+
+                if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                    alert('Please allow pop-ups for this site to add your certificate.');
+                } else {
+                    alert(`To add your certificate:\n\n1. Enter the Name: Arduino Certificate\n2. Enter the Company: RobotiCore Club\n3. Enter your ID: ${id}\n4. Copy this URL and paste it in the "Diploma URL"\n5. Download the certificate image and add it as Media.\n6. Click Save.\n\nNote: If LinkedIn doesn't open your page, please make sure you are signed in or connected to LinkedIn first.`);
+                }
             });
-            
-            // If the new window was blocked by the browser, notify the user
-            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
-                alert('Please allow pop-ups for this site to add your certificate.');
-            } else {
-                // Provide instructions for filling out the form
-                alert(`To add your certificate:\n\n1. Enter the Name: Arduino Certificate\n2. Enter the Company: RobotiCore Club\n3. Enter your ID: ${id}\n4. Copy this URL and paste it in the "Diploma URL"\n5. Download the certificate image and add it as Media.\n6. Click Save.\n\nNote: If LinkedIn doesn't open your page, please make sure you are signed in or connected to LinkedIn first.`);
-            }
-        });
+        }
 
-        // Show info-box and buttons
-        document.getElementById('info-box').style.display = 'block';
-        document.getElementById('certificate-buttons').style.display = 'flex'; // Ensure flex display for buttons
+        if (infoBox) infoBox.style.display = 'block';
+        if (certificateButtons) certificateButtons.style.display = 'flex';
+
     } else {
         const verificationMessage = document.getElementById('verification-message');
-
-        // Set the message and assign a new ID for invalid certificates
-        verificationMessage.innerText = 'Invalid Certificate!';
-        verificationMessage.id = 'invalid-certificate';
-
-        document.getElementById('info-box').style.display = 'none';
-        document.getElementById('certificate-buttons').style.display = 'none'; // Hide buttons for invalid certificates
+        if (verificationMessage) {
+            verificationMessage.innerText = 'Invalid Certificate ID. Please try again or contact support.';
+            verificationMessage.id = 'invalid-certificate';
+        }
     }
+});
