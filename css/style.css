@@ -1,9 +1,6 @@
 ::-webkit-scrollbar {
     display: none;
   }
-html {
-    overflow-x: hidden; 
-}
   
   body {
     overflow: -webkit-paged-x;
@@ -105,7 +102,38 @@ html {
     margin-left: 8px; /* Space between text and icon */
 }
 
+#invalid-certificate {
+      display: flex !important;
+      align-items: center !important;
+      text-align: center !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 1.2rem !important;
+      color: #d32f2f !important; /* Dark red text */
+}
 
+#invalid-certificate::before {
+      content: '\26A0' !important; /* Unicode for warning symbol */
+      font-size: 1.5rem !important;
+      text-align: center !important;
+      color: #f44336 !important; /* Red icon */
+      margin-right: 10px !important;
+}
+#verified-certificate {
+      display: flex !important;
+      align-items: center !important;
+      text-align: center !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 1.2rem !important;
+      color: #2e7d32 !important; /* Dark green text */
+}
+
+#verified-certificate::before {
+      content: '\2714' !important; /* Unicode for checkmark */
+      font-size: 1.5rem !important;
+      text-align: center !important;
+      color: #4caf50 !important; /* Green icon */
+      margin-right: 10px !important;
+}
 
 /*** Spinner ***/
 #spinner {
@@ -191,16 +219,6 @@ html {
 #info-box p {
     margin: 5px 0; /* Adjust the spacing between the info elements */
 }
-
-#verification-message {
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    width: 100%;
-    margin-top: 30px;
-}
-
-
 
 
 .btn-square,
@@ -1004,7 +1022,7 @@ html {
 /*** Footer ***/
 .footer {
     background: linear-gradient(rgba(53, 53, 53, .7), rgba(53, 53, 53, .7)), url(../img/footer.jpg) center center no-repeat;
-    background-size: cover;
+    background-size: cover !important;
 }
 
 .footer .btn.btn-social {
@@ -1158,18 +1176,12 @@ html {
     z-index: 1;
     transform: rotate(-120deg);
     animation: rotate 6s linear infinite;
-    transition: animation 0.5s ease-in-out; /* Smooth transition */
     border: 20px;
 }
 
 .gear_container:hover,
 .gear_container:active {
-    animation: rotate 2s linear infinite; /* Faster rotation when active */
-    transition: animation 0.2s ease-in-out; /* Quick transition to faster speed */
-}
-
-.gear_container {
-    animation: rotate 6s linear infinite; /* Back to original speed */
+    animation: rotate 2s linear infinite;
 }
 
 @keyframes rotate {
@@ -1180,7 +1192,6 @@ html {
         transform: rotate(360deg);
     }
 }
-
 
 .mapbox {
     justify-items: center;
@@ -1244,7 +1255,7 @@ html {
   
   .jumpy-button {
     position: absolute;
-    bottom: -250px;
+    bottom: -300px;
     background-color: #162645;
     color: white;
     border: none;

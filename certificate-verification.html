@@ -96,7 +96,7 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Formation Arduino</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Arduino Workshop</h1>
         </div>
     </div>
     <!-- Page Header End -->
@@ -106,9 +106,9 @@
     <div id="image-info-wrapper">
         <img id="certificate-image" src="" alt="Certificate Image">
         <div class="info-box" id="info-box" style="display: none;">
-            <p><i class="fa fa-calendar-alt"></i> Date: August 10, 2024</p>
+            <p><i class="fa fa-calendar-alt"></i> Date: October 5,October 12 2024</p>
             <p><i class="fa fa-map-marker-alt"></i> Location: Ensam Rabat</p>
-            <p><i class="fa fa-clock"></i> Duration: 4 weeks</p>
+            <p><i class="fa fa-clock"></i> Duration: 2 weeks</p>
             <!-- Buttons for download and LinkedIn post -->
             <div id="certificate-buttons" style="display: none; margin-top: 20px;">
                 <a id="download-button" class="btn" href="#" download="certificate.jpg">
@@ -116,15 +116,63 @@
                 </a>                    
                 <a id="linkedin-button" class="btn" href="#" target="_blank">
                     Post on LinkedIn <i class="fab fa-linkedin-in"></i>
-                </a>                                                                  
-            </div>                
+                </a>
+            
+                <!-- Show Rankings Button with Icon -->
+                <a class="btn btn-black show-rankings" data-bs-toggle="modal" data-bs-target="#rankingsModal">
+                    Show Rankings <i class="fas fa-trophy"></i>
+                </a>
+            </div>        
         </div>
     </div>
     <h1 id="verification-message" class="verification-message">Checking certificate...</h1>
-</div>
 
+
+        <!-- Modal Structure -->
+<!--         <div class="modal fade" id="rankingsModal" tabindex="-1" aria-labelledby="rankingsModalLabel" aria-hidden="true">
+            <span class="close-button" onclick="closeModal()">✖</span>
+            <div class="modal-dialog">
+                
+                <div class="modal-content">
+                   
+                    <h1>Top 20 In Arduino's Workshop</h1>
+                    
+                    <div class="podium-container">
+                        <div class="podium second">
+                            <div class="rank">🥈</div>
+                            <div class="name">Karim Dekkani</div>
+                        </div>
+                        <div class="podium first">
+                            <div class="rank">🥇</div>
+                            <div class="name">Abdoullah Alalgui</div>
+                        </div>
+                        <div class="podium third">
+                            <div class="rank">🥉</div>
+                            <div class="name">Mehdi Bahlaoui</div>
+                        </div>
+                    </div>
+        
+                    <div class="validation-container">
+                        <span id="valide-button" class="validation selected" onclick="toggleList('valide-list', 'non-valide-list')">Validé</span>
+                        <span id="non-valide-button" class="validation" onclick="toggleList('non-valide-list', 'valide-list')">Non Validé</span>
+                    </div>
+        
+                    <ul id="valide-list" class="validation-list">
+                        <li><span class="position">4</span> Ilyas Figuigui <span class="grade">10/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">5</span> Rostom Nizar <span class="grade">10/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">6</span> Rajae Tora <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
+                    </ul>
+                
+                    <ul id="non-valide-list" class="validation-list">
+                        <li><span class="position">7</span> Mehdi Haytom <span class="grade">5/10</span> <span class="status">Non Validé</span></li>
+                        <li><span class="position">8</span> Achraf Echaffaoui <span class="grade">0/10</span> <span class="status">Non Validé</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+ -->
       <!-- Footer Start -->
-      <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5" id="">
                 <div class="col-lg-3 col-md-6">
@@ -176,14 +224,55 @@
                 </div>
             </div>
         </div>
-    </div>
+</div>
     <!-- Footer End -->
 
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+    <script>
+        function toggleList(showListId, hideListId) {
+            document.getElementById(showListId).style.display = 'block';
+            document.getElementById(hideListId).style.display = 'none';
 
+            // Update the selected state
+            if (showListId === 'valide-list') {
+                document.getElementById('valide-button').classList.add('selected');
+                document.getElementById('non-valide-button').classList.remove('selected');
+            } else {
+                document.getElementById('valide-button').classList.remove('selected');
+                document.getElementById('non-valide-button').classList.add('selected');
+            }
+        }
+
+        // Function to close the modal and the overlay// Function to close the modal
+        function closeModal() {
+            const modal = document.getElementById('rankingsModal');
+            const overlay = document.querySelector('.overlay'); // Assuming you have an overlay class
+
+            modal.classList.remove('show'); // Remove the 'show' class to hide the modal
+            modal.style.display = 'none'; // Also set display to none
+
+            overlay.classList.remove('show'); // Hide the overlay
+            overlay.style.display = 'none'; // Ensure the overlay is hidden
+        }
+
+        // Event listener for the close button
+        const closeButton = document.querySelector('.close-button');
+        closeButton.addEventListener('click', closeModal);
+
+        // Optional: Close the modal when clicking outside of it
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('rankingsModal');
+            const overlay = document.querySelector('.overlay');
+            if (event.target === modal || event.target === overlay) {
+                closeModal();
+            }
+        });
+
+
+    </script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
