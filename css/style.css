@@ -190,11 +190,6 @@
     height: 48px;
 }
 
-#verification-container {
-    text-align: center;
-    padding: 20px;
-}
-
 #image-info-wrapper {
     display: flex;
     align-items: center;
