@@ -96,7 +96,7 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Arduino Workshop</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Arduino's Workshop</h1>
         </div>
     </div>
     <!-- Page Header End -->
@@ -119,7 +119,7 @@
                 </a>
             
                 <!-- Show Rankings Button with Icon -->
-                <a class="btn btn-black show-rankings" data-bs-toggle="modal" data-bs-target="#rankingsModal">
+                <a id="Rankings-button" class="btn btn-black show-rankings" data-bs-toggle="modal" data-bs-target="#rankingsModal">
                     Show Rankings <i class="fas fa-trophy"></i>
                 </a>
             </div>        
@@ -130,25 +130,25 @@
 
         <!-- Modal Structure -->
         <div class="modal fade" id="rankingsModal" tabindex="-1" aria-labelledby="rankingsModalLabel" aria-hidden="true">
-            <span class="close-button" onclick="closeModal()">✖</span>
+            <!-- <span class="close-button" onclick="closeModal()">✖</span> -->
             <div class="modal-dialog">
                 
                 <div class="modal-content">
                    
-                    <h1>Top 20 In Arduino's Workshop</h1>
+                    <h1 class="modal_title">Quiz Ranking</h1>
                     
                     <div class="podium-container">
                         <div class="podium second">
                             <div class="rank">🥈</div>
-                            <div class="name">Karim Dekkani</div>
+                            <div class="name">Aya Chehhal</div>
                         </div>
                         <div class="podium first">
                             <div class="rank">🥇</div>
-                            <div class="name">Abdoullah Alalgui</div>
+                            <div class="name">Oubati Randa</div>
                         </div>
                         <div class="podium third">
                             <div class="rank">🥉</div>
-                            <div class="name">Mehdi Bahlaoui</div>
+                            <div class="name">Aymane (K-aizen)</div>
                         </div>
                     </div>
         
@@ -158,14 +158,99 @@
                     </div>
         
                     <ul id="valide-list" class="validation-list">
-                        <li><span class="position">4</span> Ilyas Figuigui <span class="grade">10/10</span> <span class="status">Validé</span></li>
-                        <li><span class="position">5</span> Rostom Nizar <span class="grade">10/10</span> <span class="status">Validé</span></li>
-                        <li><span class="position">6</span> Rajae Tora <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">4</span> El Bir Amira <span class="grade">10/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">5</span> Aya Ennakhlaoui <span class="grade">10/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">6</span> Aferdou Hajar <span class="grade">10/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">7</span> Azeroual Youssef <span class="grade">10/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">8</span> Siham AitSi <span class="grade">10/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">9</span> Taha Zaki <span class="grade">10/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">10</span> Oumaima Qsaib <span class="grade">10/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">11</span> Lina Sahrourdi <span class="grade">9.75/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">12</span> Lakhder Zakaria <span class="grade">9.75/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">13</span> EL Yaagoubi Bouthayna <span class="grade">9.75/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">14</span> Nahroud Ikram <span class="grade">9.75/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">15</span> El Hassany Alae-Eddine <span class="grade">9.75/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">16</span> Sara Nadi <span class="grade">9.75/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">17</span> Ninia Houssam <span class="grade">9.7/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">18</span> El Machkour Hiba <span class="grade">9.7/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">19</span> Soukaina Gargallon <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">20</span> Nada Bennaouar <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">21</span> Tahiri Kaoutar <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">22</span> Mourid Hiba <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">23</span> Elardi Wiam <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">24</span> Drissi Adam <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">25</span> Bentounsi Inas <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">26</span> Ouijarran Hajar <span class="grade">9.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">27</span> Hrou Imane <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">28</span> Eddabbagh Douae <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">29</span> Karti Diaa-eddine <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">30</span> Mokarram Khalid <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">31</span> Anouar Habiballah <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">32</span> Hajar Abdellaoui <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">33</span> Lmoudn Noura <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">34</span> Chellaoui Nada <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">35</span> Eljirari Hasna <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">36</span> El Hamdi Hossam <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">37</span> El khayati Imane <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">38</span> El Bahloul Zineb <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">39</span> Ouafa Najoua <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">40</span> Nejsar Marouan <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">41</span> Abada Ahmed <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">42</span> El-Radouany Mounir <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">43</span> El Mansar Rihabe <span class="grade">9.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">44</span> Nittema Nerton Kader <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">45</span> Rim Jouilil <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">46</span> Zaiou Imane <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">47</span> Mahta Nouhaila <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">50</span> Benchahhti Soukaina <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">51</span> Bjaoui Yehya <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">52</span> Ayoube Douâa <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">53</span> Ismail Tahri <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">54</span> Chbani Saad <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">55</span> Boumnzel Nor <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">56</span> Fenzari Nihale <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">57</span> Errifi Hadil <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">58</span> Souhail Kabli <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">59</span> Rabib Hafssa <span class="grade">9/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">60</span> Nada Idrissi Oukili <span class="grade">8.75/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">61</span> Ardif Marwa <span class="grade">8.75/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">62</span> Dafi Imane <span class="grade">8.75/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">63</span> Alae Benrahal <span class="grade">8.75/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">64</span> Oulkaid Imane <span class="grade">8.75/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">65</span> El Bahja Yasser <span class="grade">8.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">66</span> El Haji Douae <span class="grade">8.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">67</span> Himmi Wissal <span class="grade">8.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">68</span> Mohamed Taha Etaibi <span class="grade">8.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">69</span> El Machmour Adnane <span class="grade">8.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">70</span> Marwa Ghazaoui <span class="grade">8.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">71</span> Hachimi Oumayma <span class="grade">8.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">72</span> Asfouri Ismail <span class="grade">8.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">73</span> Mimouni Salma <span class="grade">8.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">74</span> Kheddam Yassine <span class="grade">8.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">75</span> Mansour Ibtissam <span class="grade">8.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">76</span> Soulaimane Marsli <span class="grade">8.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">77</span> Madani Fatima Azzahrae <span class="grade">8.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">78</span> Rouhli Hanane <span class="grade">8.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">79</span> Jriri Jihane <span class="grade">8.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">80</span> Lamnaouar Sanae <span class="grade">8.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">81</span> Frikel Ibtissame <span class="grade">8/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">82</span> Bellahcen Imane <span class="grade">7.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">83</span> Najih Haythem <span class="grade">7.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">84</span> Med Othmane Charkaoui <span class="grade">7.5/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">85</span> Hiba Zaghou <span class="grade">7.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">86</span> Hnine Alae <span class="grade">7.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">87</span> Lafdaoui Adnane <span class="grade">7.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">88</span> Ait Torhza Med Oussama <span class="grade">7.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">89</span> Ismail Elarfaoui <span class="grade">7.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">90</span> Lemridi Taha Yassine <span class="grade">7.25/10</span> <span class="status">Validé</span></li>
+                        <li><span class="position">91</span> Ouiam Gueddani <span class="grade">7.25/10</span> <span class="status">Validé</span></li>
                     </ul>
                 
                     <ul id="non-valide-list" class="validation-list">
-                        <li><span class="position">7</span> Mehdi Haytom <span class="grade">5/10</span> <span class="status">Non Validé</span></li>
-                        <li><span class="position">8</span> Achraf Echaffaoui <span class="grade">0/10</span> <span class="status">Non Validé</span></li>
+                        <li><span class="position">92</span> Mehdi Haytom <span class="grade">6.99/10</span> <span class="status">Bghani n7et lih 7 hhh</span></li>
+                        <li><span class="position">93</span> Mehdi Bahlaoui <span class="grade">5/10</span> <span class="status">kay3jn m3a l'ade</span></li>
+                        <li><span class="position">94</span> Simedd <span class="grade">0.1/10</span> <span class="status">Imposter</span></li>
+                        <li><span class="position">95</span> Achraf Echaffaoui <span class="grade">0/10</span> <span class="status">Ma formateur ma walo</span></li>
                     </ul>
                 </div>
             </div>
