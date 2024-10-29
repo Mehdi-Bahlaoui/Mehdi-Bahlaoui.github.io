@@ -94,7 +94,8 @@ document.addEventListener('DOMContentLoaded', function () {
         '670453': { message: 'Certificate for Ait Torhza Med Oussama is Verified', imageUrl: 'img/Certs/670453.png' },
         '827828': { message: 'Certificate for Ismail Elarfaoui is Verified', imageUrl: 'img/Certs/827828.png' },
         '827170': { message: 'Certificate for Lemridi Taha Yassine is Verified', imageUrl: 'img/Certs/827170.png' },
-        '325315': { message: 'Certificate for Ouiam Gueddani is Verified', imageUrl: 'img/Certs/325315.png' }
+        '325315': { message: 'Certificate for Ouiam Gueddani is Verified', imageUrl: 'img/Certs/325315.png' },
+        '987654': { imageUrl: 'img/Certs/987654.png' }
     };
 
     // Verify if the ID exists in the validCertificates list
