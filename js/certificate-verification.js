@@ -146,9 +146,19 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         // Handle case where certificate ID is invalid
         const verificationMessage = document.getElementById('verification-message');
+        const certificateImage = document.getElementById('certificate-image');
+
         if (verificationMessage) {
             verificationMessage.innerText = 'Invalid Certificate ID. Please try again or contact support.';
             verificationMessage.id = 'invalid-certificate';
+        }
+
+        // Hide certificate image if the ID is invalid
+        if (certificateImage) {
+            console.log('Certificate image element found, hiding it.');
+            certificateImage.style.display = 'none';
+        } else {
+            console.log('Certificate image element not found.');
         }
     }
 });
