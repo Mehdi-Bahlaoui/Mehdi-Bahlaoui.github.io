@@ -1646,4 +1646,7 @@ font-size: 0.9rem;
     margin-top: -20px;
     margin-right: 0px;
 }
+.status {
+    margin-right: -5px;
+}
 }
