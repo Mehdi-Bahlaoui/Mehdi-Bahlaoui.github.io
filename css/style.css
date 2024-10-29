@@ -130,7 +130,6 @@
 #invalid-certificate {
       display: flex !important;
       align-items: center !important;
-      text-align: center !important;
       font-family: 'Poppins', sans-serif !important;
       font-size: 1.2rem !important;
       color: #d32f2f !important; /* Dark red text */
@@ -141,9 +140,11 @@
       font-size: 1.5rem !important;
       text-align: center !important;
       color: #f44336 !important; /* Red icon */
+      margin-left: 10px !important;
       margin-right: 10px !important;
 }
 #verified-certificate {
+      margin-top: 15px;
       display: flex !important;
       align-items: center !important;
       text-align: center !important;
@@ -157,7 +158,6 @@
       font-size: 1.5rem !important;
       text-align: center !important;
       color: #4caf50 !important; /* Green icon */
-      margin-right: 10px !important;
 }
 
 /*** Spinner ***/
@@ -1590,4 +1590,60 @@
     h2, .h2{
         font-size: calc(1.3rem + .9vw);    
     }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+#verification-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* Adjust the certificate image width */
+#certificate-image {
+width: 100%;
+max-width: 90vw;
+height: auto;
+margin-right: 0px; /* Space between the image and the info box */
+}
+
+/* Stack the info box and buttons below the certificate image */
+#image-info-wrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.info-box {
+display: block;
+width: 100%;
+max-width: 90vw;
+text-align: center;
+margin-top: 10px;
+}
+
+/* Adjust button styles for mobile */
+#certificate-buttons {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+width: 100%;
+margin-top: 20px;
+margin-left: -10px;
+}
+
+/* Style individual buttons */
+#certificate-buttons .btn {
+width: 80%;
+max-width: 250px;
+text-align: center;
+padding: 10px;
+font-size: 0.9rem;
+}
+#invalid-certificate::before {
+    margin-top: -20px;
+    margin-right: 0px;
+}
 }
