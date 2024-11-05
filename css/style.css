@@ -1274,7 +1274,7 @@
   
   .jumpy-button {
     position: absolute;
-    bottom: -300px;
+    bottom: -200px;
     background-color: #162645;
     color: white;
     border: none;
@@ -1290,11 +1290,11 @@
   
   
   #flip-back {
-    left: 20%;
+    left: 10%;
   }
   
   #flip-forward {
-    right: 20%;
+    right: 10%;
   }
   
 .competitions{
