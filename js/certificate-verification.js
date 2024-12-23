@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Define the list of valid certificates with message and image URL for each ID
     const validCertificates = {
-        const validCertificates = {
+
     '625298': { message: 'Certificate for Lmhyeb is Verified', imageUrl: 'img/Certs/625298.png' },
     '624297': { message: 'Certificate for El Yaagoubi Bouthayna is Verified', imageUrl: 'img/Certs/624297.png' },
     '157963': { message: 'Certificate for Abdoullah Alalgui is Verified', imageUrl: 'img/Certs/157963.png' },
