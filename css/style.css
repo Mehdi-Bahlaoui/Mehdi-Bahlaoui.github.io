@@ -1650,4 +1650,10 @@ font-size: 0.9rem;
 #about-video {
     display: none;
 }
+
+.py-5{
+    padding-top:1.5rem !important;
+    padding-bottom:1.5rem !important;
+}
+
 }
