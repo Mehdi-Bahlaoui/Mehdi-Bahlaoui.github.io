@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     '625298': { message: 'Certificate for Lmhyeb is Verified', imageUrl: 'img/Certs/625298.png' },
     '624297': { message: 'Certificate for El Yaagoubi Bouthayna is Verified', imageUrl: 'img/Certs/624297.png' },
+    '624299': { message: 'Certificate for El Yaagoubi Bouthayna is Verified', imageUrl: 'img/Certs/624299.png' },
     '157963': { message: 'Certificate for Abdoullah Alalgui is Verified', imageUrl: 'img/Certs/157963.png' },
     '565263': { message: 'Certificate for Mehdi Bahlaoui is Verified', imageUrl: 'img/Certs/565263.png' },
     '867735': { message: 'Certificate for Fenzari Nihale is Verified', imageUrl: 'img/Certs/867735.png' },
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     '392007': { message: 'Certificate for Hiba Zaghou is Verified', imageUrl: 'img/Certs/392007.png' },
     '646092': { message: 'Certificate for Elardi Wiam is Verified', imageUrl: 'img/Certs/646092.png' },
     '609296': { message: 'Certificate for Eddabagh Douae is Verified', imageUrl: 'img/Certs/609296.png' },
-    '473039': { message: 'Certificate for Lakhder Zakari is Verified', imageUrl: 'img/Certs/473039.png' },
+    '473039': { message: 'Certificate for Lakhder Zakaria is Verified', imageUrl: 'img/Certs/473039.png' },
     '744259': { message: 'Certificate for Belarbi Zakariae is Verified', imageUrl: 'img/Certs/744259.png' },
     '413620': { message: 'Certificate for Soulaimane Marsli is Verified', imageUrl: 'img/Certs/413620.png' },
     '315574': { message: 'Certificate for Drissi Adam is Verified', imageUrl: 'img/Certs/315574.png' },
@@ -55,12 +56,17 @@ document.addEventListener('DOMContentLoaded', function () {
     '725582': { message: 'Certificate for Dafi Imane is Verified', imageUrl: 'img/Certs/725582.png' },
     '441788': { message: 'Certificate for Er-Radouany Mounir is Verified', imageUrl: 'img/Certs/441788.png' },
     '648338': { message: 'Certificate for El Machkour Hiba is Verified', imageUrl: 'img/Certs/648338.png' },
+    '648339': { message: 'Certificate for El Machkour Hiba is Verified', imageUrl: 'img/Certs/648339.png' },
     '210821': { message: 'Certificate for El Bahja Yasser is Verified', imageUrl: 'img/Certs/210821.png' },
     '459680': { message: 'Certificate for Ninia Houssam is Verified', imageUrl: 'img/Certs/459680.png' },
     '901197': { message: 'Certificate for Elazzouzi Chadia is Verified', imageUrl: 'img/Certs/901197.png' },
     '356746': { message: 'Certificate for Hanane Ed-Diaf is Verified', imageUrl: 'img/Certs/356746.png' },
     '475839': { message: 'Certificate for Farhi Mohammed Amine is Verified', imageUrl: 'img/Certs/475839.png' },
-    '668749': { message: 'Certificate for Fatima Khardouli is Verified', imageUrl: 'img/Certs/668749.png' }
+    '668749': { message: 'Certificate for Fatima Khardouli is Verified', imageUrl: 'img/Certs/668749.png' },
+    '668745': { message: 'Certificate for Samia El Hadiouia is Verified', imageUrl: 'img/Certs/668745.png' },
+    '564564': { message: 'Certificate for Dekkani Karim is Verified', imageUrl: 'img/Certs/564564.png' },
+    '387295': { message: 'Certificate for Rajae Tora is Verified', imageUrl: 'img/Certs/387295.png' }
+
     };
 
     // Verify if the ID exists in the validCertificates list
