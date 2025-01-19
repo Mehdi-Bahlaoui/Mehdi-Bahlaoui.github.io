@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // Verify if the ID exists in the validCertificates list
-    if (validCertificates[String(id)]) {
+    if (validCertificates[id]) {
         const certificate = validCertificates[id];
 
         // Retrieve and update DOM elements if they exist
