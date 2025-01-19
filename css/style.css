@@ -1404,16 +1404,17 @@
 
 .first {
     height: 250px;
+    background: linear-gradient(145deg, #ffd700, #e6c200) !important; /* Gold color */
 }
 
 .second {
     height: 200px;
-    background: linear-gradient(145deg, #c0c0c0, #a1a1a1);
+    background: linear-gradient(145deg, #c0c0c0, #a1a1a1) !important; /* Silver color */
 }
 
 .third {
     height: 180px;
-    background: linear-gradient(145deg, #cd7f32, #b5692a);
+    background: linear-gradient(145deg, #cd7f32, #b5692a) !important; /* Bronze color */
 }
 
 /* Custom Underlined "Validé" and "Non Validé" */
