@@ -65,7 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
     '668749': { message: 'Certificate for Fatima Khardouli is Verified', imageUrl: 'img/Certs/668749.png' },
     '668745': { message: 'Certificate for Samia El Hadiouia is Verified', imageUrl: 'img/Certs/668745.png' },
     '564564': { message: 'Certificate for Dekkani Karim is Verified', imageUrl: 'img/Certs/564564.png' },
-    '387295': { message: 'Certificate for Rajae Tora is Verified', imageUrl: 'img/Certs/387295.png' }
+    '387295': { message: 'Certificate for Rajae Tora is Verified', imageUrl: 'img/Certs/387295.png' },
+    '563775': { message: 'Certificate for Marwa Ghazoui is Verified', imageUrl: 'img/Certs/563775.png' }
 
     };
 
