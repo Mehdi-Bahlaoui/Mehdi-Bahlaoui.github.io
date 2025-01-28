@@ -1,3 +1,7 @@
+document.getElementById('cheeseburger-close-btn').addEventListener('click', function() {
+    document.getElementById('cheeseburger-notification').style.display = 'none';
+});
+
 (function ($) {
     "use strict";
 

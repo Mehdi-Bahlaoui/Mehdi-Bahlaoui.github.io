@@ -790,6 +790,51 @@
     }
 }
 
+/* Notification Style */
+.cheeseburger-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.cheeseburger-img {
+    width: 120px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.cheeseburger-text {
+    flex-grow: 1;
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cheeseburger-close-btn {
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.cheeseburger-close-btn:hover {
+    color: #555;
+}
+
 /*** Project Portfolio ***/
 #portfolio-flters li {
     display: inline-block;
