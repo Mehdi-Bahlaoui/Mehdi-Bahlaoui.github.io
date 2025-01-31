@@ -162,19 +162,97 @@
       color: #4caf50 !important; /* Green icon */
 }
 
-/*** Spinner ***/
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
+/* Full-Screen Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    z-index: 9999;
 }
 
-#spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
+.loading-screen.hide {
+    opacity: 0;
+    visibility: hidden;
 }
+
+/* Logo Styling */
+.loading-logo {
+    width: 150px;
+    height: 150px;
+    animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    0%, 100% {
+        filter: brightness(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
+    }
+    50% {
+        filter: brightness(1.5) drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+    }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+/* Rotating Animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading Text */
+.loading-text {
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: text-glow 2s ease-in-out infinite;
+}
+
+/* Glowing Text Animation */
+@keyframes text-glow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+}
+
 
 .btn-link {
     color: #FFFFFF

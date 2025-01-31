@@ -5,20 +5,13 @@ document.getElementById('cheeseburger-close-btn').addEventListener('click', func
 (function ($) {
     "use strict";
 
-    // Spinner
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 5000);
-    };
-    spinner();
-    
+    // Hide loading screen after 10 seconds
+    setTimeout(() => {
+        document.getElementById("loading-screen").classList.add("hide");
+    }, 10000);
     
     // Initiate the wowjs
     new WOW().init();
-
 
     // Sticky Navbar
     $(window).scroll(function () {
