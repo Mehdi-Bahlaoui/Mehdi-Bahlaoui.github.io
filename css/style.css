@@ -4,14 +4,12 @@
   
   body {
     overflow: -webkit-paged-x;
-    -webkit-overflow-scrolling: touch; 
   }
 
   body {
     scrollbar-width: none; 
   }
     
-/********** Template CSS **********/
 :root {
     --primary: rgba(0, 0, 0, 0.75);
     --light: #F5F5F5;
@@ -53,6 +51,10 @@
 }
   
 
+#car, #contact{
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
 
 #middletext{
     margin-bottom: -150px !important;
@@ -1178,11 +1180,6 @@
 }
 
 
-#grey {
-    
-}
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .verified-message {
@@ -1204,12 +1201,6 @@
   color: #4caf50; /* Green icon */
   margin-right: 10px;
 }
-
-
-
-
-
-
 
 .logo-container {
     transform-style: preserve-3d;
