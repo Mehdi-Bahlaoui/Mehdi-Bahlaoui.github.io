@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
     '564564': { message: 'Certificate for Dekkani Karim is Verified', imageUrl: 'img/Certs/564564.png' },
     '387295': { message: 'Certificate for Rajae Tora is Verified', imageUrl: 'img/Certs/387295.png' },
     '563775': { message: 'Certificate for Marwa Ghazoui is Verified', imageUrl: 'img/Certs/563775.png' },
-    '354354': { message: 'Certificate for El Hamdi Hossam is Verified', imageUrl: 'img/Certs/354354.png' }
-
+    '354354': { message: 'Certificate for El Hamdi Hossam is Verified', imageUrl: 'img/Certs/354354.png' },
+    '145760': { message: 'Certificate for El Hamdi Hossam is Verified', imageUrl: 'img/Certs/145760.png' }
     };
 
     // Verify if the ID exists in the validCertificates list
