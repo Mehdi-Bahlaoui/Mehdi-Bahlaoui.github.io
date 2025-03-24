@@ -33,17 +33,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
+    <link href="css/shop.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loading-screen">
-        <img src="img/Logo Roboticore.png" alt="Logo" class="loading-logo">
-        <div class="loading-spinner"></div>
-        <div class="loading-text">Loading, please wait...</div>
-    </div>
-
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0">
@@ -92,63 +87,129 @@
     <!-- Navbar End -->
 
 
-    <section id="billboard">
-        <div class="d-flex jarallax position-relative"
-          style="background-image: url(img/banner-image.jpg); background-size: cover; background-repeat: no-repeat; height: 100vh; background-position: center; height: 100vh;">
-          <div class="banner-content content-light text-center offset-md-3 col-md-6 align-content-center">
-            <h2 class="banner-title">
-              Build Your Own Style.
-            </h2>
-            <p class="fs-5">Iusto, voluptatibus commodi accusamus quas odit maxime cupiditate similique vitae.</p>
-            <div class="btn-center">
-              <a href="shop.html" class="btn btn-medium btn-light">Shop Now</a>
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Our Shop</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Shop</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Items Starts Here -->
+    <div class="featured-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="section-heading">
+              <div class="line-dec"></div>
+              <h1>Featured Items</h1>
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-12">
+            <div id="filters" class="button-group">
+              <button class="btn btn-primary" data-filter="*">All Products</button>
+              <button class="btn btn-primary" data-filter=".new">Newest</button>
+              <button class="btn btn-primary" data-filter=".low">Low Price</button>
+              <button class="btn btn-primary" data-filter=".high">Hight Price</button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  
+    <div class="featured container no-gutter">
 
-
-      <section id="company-services">
-        <div class="container padding-large pb-0">
-          <div class="row">
-    
-            <div class="icon-box text-center col-md-4 col-sm-12">
-              <div class="content-box">
-                <div class="icon-box-icon">
-                  <i class="icon icon-shipping"></i>
+        <div class="row posts">
+            <div id="1" class="item new col-md-4">
+              <a href="single-product.html">
+                <div class="featured-item">
+                  <img src="assets/images/product-01.jpg" alt="">
+                  <h4>Proin vel ligula</h4>
+                  <h6>$15.00</h6>
                 </div>
-                <div class="icon-content">
-                  <h3 class="no-margin">Quick delivery</h3>
-                  <p>Inside City delivery within 5 days</p>
-                </div>
-              </div>
+              </a>
             </div>
-            <div class="icon-box text-center col-md-4 col-sm-12">
-              <div class="content-box">
-                <div class="icon-box-icon">
-                  <i class="icon icon-store"></i>
+            <div id="2" class="item high col-md-4">
+              <a href="single-product.html">
+                <div class="featured-item">
+                  <img src="assets/images/product-02.jpg" alt="">
+                  <h4>Erat odio rhoncus</h4>
+                  <h6>$25.00</h6>
                 </div>
-                <div class="icon-content">
-                  <h3 class="no-margin">Pick up in store</h3>
-                  <p>We have option of pick up in store.</p>
-                </div>
-              </div>
+              </a>
             </div>
-            <div class="icon-box text-center col-md-4 col-sm-12">
-              <div class="content-box">
-                <div class="icon-box-icon">
-                  <i class="icon icon-package"></i>
+            <div id="3" class="item low col-md-4">
+              <a href="single-product.html">
+                <div class="featured-item">
+                  <img src="assets/images/product-03.jpg" alt="">
+                  <h4>Integer vel turpis</h4>
+                  <h6>$35.00</h6>
                 </div>
-                <div class="icon-content">
-                  <h3 class="no-margin">Special packaging</h3>
-                  <p>Our packaging is best for products.</p>
-                </div>
-              </div>
+              </a>
             </div>
-    
-          </div>
+            <div id="4" class="item low col-md-4">
+              <a href="single-product.html">
+                <div class="featured-item">
+                  <img src="assets/images/product-04.jpg" alt="">
+                  <h4>Sed purus quam</h4>
+                  <h6>$45.00</h6>
+                </div>
+              </a>
+            </div>
+            <div id="5" class="item new high col-md-4">
+              <a href="single-product.html">
+                <div class="featured-item">
+                  <img src="assets/images/product-05.jpg" alt="">
+                  <h4>Morbi aliquet</h4>
+                  <h6>$55.00</h6>
+                </div>
+              </a>
+            </div>
+            <div id="6" class="item new col-md-4">
+              <a href="single-product.html">
+                <div class="featured-item">
+                  <img src="assets/images/product-06.jpg" alt="">
+                  <h4>Urna ac diam</h4>
+                  <h6>$65.00</h6>
+                </div>
+              </a>
+            </div>
+            <div id="7" class="item new high col-md-4">
+              <a href="single-product.html">
+                <div class="featured-item">
+                  <img src="assets/images/product-03.jpg" alt="">
+                  <h4>Proin eget imperdiet</h4>
+                  <h6>$75.00</h6>
+                </div>
+              </a>
+            </div>
+            <div id="8" class="item low new col-md-4">
+              <a href="single-product.html">
+                <div class="featured-item">
+                  <img src="assets/images/product-02.jpg" alt="">
+                  <h4>Nullam risus nisl</h4>
+                  <h6>$85.00</h6>
+                </div>
+              </a>
+            </div>
+            <div id="9" class="item new col-md-4">
+              <a href="single-product.html">
+                <div class="featured-item">
+                  <img src="assets/images/product-01.jpg" alt="">
+                  <h4>Cras tempus</h4>
+                  <h6>$95.00</h6>
+                </div>
+              </a>
+            </div>
         </div>
-      </section>  
+    </div>
+        
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -206,13 +267,7 @@
     </div>
     <!-- Footer End -->
 
-    <!-- Notification Banner -->
-    <div id="cheeseburger-notification" class="cheeseburger-notification">
-        <img src="img/ttt.png" alt="Event Icon" class="cheeseburger-img"> <!-- Replace with your image URL -->
-        <p class="cheeseburger-text">Upcoming Event: 2nd Edition of Moroccan Robotics Week February 12-16 2025</p>
-        <button id="cheeseburger-close-btn" class="cheeseburger-close-btn">X</button>
-    </div>
-    
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 

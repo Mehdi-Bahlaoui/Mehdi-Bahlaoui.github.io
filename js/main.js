@@ -8,7 +8,7 @@ document.getElementById('cheeseburger-close-btn').addEventListener('click', func
     // Hide loading screen after 10 seconds
     setTimeout(() => {
         document.getElementById("loading-screen").classList.add("hide");
-    }, 10000);
+    }, 5000);
     
     // Initiate the wowjs
     new WOW().init();
