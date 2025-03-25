@@ -14,8 +14,6 @@
     <ul id="fileList"></ul>
 
     <script>
-        const BACKEND_URL = "https://3d-core-backend.onrender.com"; // Update with your actual backend URL
-
         async function uploadFile() {
             const fileInput = document.getElementById("fileInput");
             if (!fileInput.files.length) {
@@ -27,45 +25,36 @@
             formData.append("file", fileInput.files[0]);
             formData.append("password", "roboticore2025");
 
-            try {
-                const response = await fetch(`${BACKEND_URL}/upload`, {
-                    method: "POST",
-                    body: formData,
-                });
+            const response = await fetch("http://localhost:5000/upload", {
+                method: "POST",
+                body: formData,
+            });
 
-                const data = await response.json();
-                if (data.success) {
-                    alert("File uploaded successfully!");
-                    loadFiles();
-                } else {
-                    alert("Upload failed: " + data.error);
-                }
-            } catch (error) {
-                alert("Error connecting to the server.");
-                console.error(error);
+            const data = await response.json();
+            if (data.success) {
+                alert("File uploaded successfully!");
+                loadFiles();
+            } else {
+                alert("Upload failed: " + data.error);
             }
         }
 
         async function loadFiles() {
-            try {
-                const response = await fetch(`${BACKEND_URL}/files`);
-                const files = await response.json();
+            const response = await fetch("http://localhost:5000/files");
+            const files = await response.json();
 
-                const fileList = document.getElementById("fileList");
-                fileList.innerHTML = "";
+            const fileList = document.getElementById("fileList");
+            fileList.innerHTML = "";
 
-                files.forEach((file) => {
-                    const li = document.createElement("li");
-                    const a = document.createElement("a");
-                    a.href = file.webViewLink;
-                    a.textContent = file.name;
-                    a.target = "_blank";
-                    li.appendChild(a);
-                    fileList.appendChild(li);
-                });
-            } catch (error) {
-                console.error("Error loading files:", error);
-            }
+            files.forEach((file) => {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                a.href = file.webViewLink;
+                a.textContent = file.name;
+                a.target = "_blank";
+                li.appendChild(a);
+                fileList.appendChild(li);
+            });
         }
 
         loadFiles();
