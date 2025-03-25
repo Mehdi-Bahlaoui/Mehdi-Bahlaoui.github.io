@@ -14,9 +14,11 @@ app.use(cors());
 app.use(express.json());
 
 // Google Drive Authentication
+const credentials = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
+
 const auth = new google.auth.GoogleAuth({
-  keyFile: "credentials.json",
-  scopes: ["https://www.googleapis.com/auth/drive"],
+    credentials,
+    scopes: ["https://www.googleapis.com/auth/drive.file"],
 });
 
 const drive = google.drive({ version: "v3", auth });
@@ -93,6 +95,12 @@ async function sendEmailNotification(fileName, fileLink) {
     text: `A new file has been uploaded: ${fileName}\nDownload: ${fileLink}`,
   });
 }
+
+// Start Server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 
 // Start Server
 app.listen(PORT, () => {
