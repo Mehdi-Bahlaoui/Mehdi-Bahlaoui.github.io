@@ -1,17 +1,20 @@
-document.getElementById('cheeseburger-close-btn').addEventListener('click', function() {
-    document.getElementById('cheeseburger-notification').style.display = 'none';
-});
-
 (function ($) {
     "use strict";
 
-    // Hide loading screen after 10 seconds
-    setTimeout(() => {
-        document.getElementById("loading-screen").classList.add("hide");
-    }, 10000);
+    // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+            }
+        }, 1);
+    };
+    spinner();
+    
     
     // Initiate the wowjs
     new WOW().init();
+
 
     // Sticky Navbar
     $(window).scroll(function () {
@@ -95,6 +98,8 @@ document.getElementById('cheeseburger-close-btn').addEventListener('click', func
     });
     
 })(jQuery);
+
+
 
 function submitEmail() {
     var email = document.getElementById("emailInput").value;
